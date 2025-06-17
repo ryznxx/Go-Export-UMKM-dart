@@ -1,0 +1,25 @@
+{
+   "root": {
+      "data": "Export",
+      "children": [
+         {
+            "data": 12,
+            "children": [
+               {
+                  "data": {
+                     "namaBarang": "1",
+                     "dataSpesifik": {
+                        "namaBarang": "1",
+                        "hargaBarang": 1,
+                        "exportBarang": "1",
+                        "kategoriBarang": "1"
+                     }
+                  },
+                  "children": []
+               }
+            ]
+         }
+      ]
+   },
+   "type": "String"
+}

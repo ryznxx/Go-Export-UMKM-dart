@@ -67,7 +67,7 @@ class HistoryManager<T> {
           'Domisili Export',
           "Kategori Barang"
         ], // Set headers
-        columnWidths: [4, 15, 15, 15, 17], // Optionally set column widhts
+        columnWidths: [4, 15, 15, 15, 17],
         wordWrap: true,
         columnAlignment: [
           HorizontalAlign.center,
@@ -166,50 +166,3 @@ String trimOrPad(String input, int maxLen, int padLen) {
     return input.padRight(padLen);
   }
 }
-
-//  void anjat(int target) {
-//     if (target <= 0) return;
-
-//     var node = _current;
-//     while (node?.prev != null) {
-//       node = node!.prev;
-//     }
-
-//     int count = 1;
-//     while (node != null) {
-//       if (count == target) {
-//         final data = node.data as List;
-
-//         final table = Table(
-//           header: [
-//             'No',
-//             'Nama Barang',
-//             "Harga Barang",
-//             "Kategori Barang"
-//           ], // Set headers
-//           columnWidths: [5, 20, 20, 22], // Optionally set column widhts
-//           wordWrap: true,
-//           columnAlignment: [
-//             HorizontalAlign.center,
-//             HorizontalAlign.left,
-//             HorizontalAlign.left,
-//             HorizontalAlign.left
-//           ],
-//         );
-
-//         for (var i = 0; i < data.length; i++) {
-//           table.add([
-//             i + 1,
-//             data[i]["namaBarang"],
-//             data[i]["hargaBarang"],
-//             data[i]["kategoriBarang"]
-//           ]);
-//         }
-
-//         print(table.toString());
-//         return;
-//       }
-//       node = node.next;
-//       count++;
-//     }
-//   }

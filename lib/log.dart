@@ -20,4 +20,10 @@ class Logging {
     _console.writeLine('[SUCCESS] $text');
     _console.resetColorAttributes();
   }
+
+  void warning(String text) {
+    _console.setForegroundColor(ConsoleColor.yellow);
+    _console.writeLine('[SUCCESS] $text');
+    _console.resetColorAttributes();
+  }
 }

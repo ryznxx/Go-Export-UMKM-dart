@@ -33,7 +33,7 @@ class Assignment {
     }
   }
 
-  void invalidChoose(dynamic action) {
+  void invalidChoose(Function action) {
     String answer =
         ioQuestion("\nPilihan opsi tidak valid, tekan enter untuk ulang.. ");
 
@@ -46,27 +46,25 @@ class Assignment {
     }
   }
 
-  void nextAction(dynamic action) {
+  Future<void> nextAction(Function action) async {
     String answer = ioQuestion("\ntekan enter untuk melanjutkan.. ");
 
     if (answer.isEmpty) {
-      action();
+      await action();
     }
 
     if (answer.isNotEmpty) {
-      nextAction(action);
+      await nextAction(action);
     }
   }
 
-  void retry(dynamic action, String message) {
-    String answer = ioQuestion("\n$message, tekan enter untuk mengulangi.. ");
-
-    if (answer.isEmpty) {
-      action();
-    }
-
-    if (answer.isNotEmpty) {
-      retry(action, message);
+  void retry(Function action, String message) {
+    while (true) {
+      String answer = ioQuestion("\n$message, tekan enter untuk mengulangi.. ");
+      if (answer.isEmpty) {
+        action();
+        break;
+      }
     }
   }
 }
